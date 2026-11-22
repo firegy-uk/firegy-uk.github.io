@@ -770,7 +770,7 @@
         feedback.textContent = "Sending\u2026";
         feedback.hidden = false;
 
-        fetch("https://formsubmit.co/ajax/office@firegy.co.uk", {
+        fetch("https://formsubmit.co/ajax/2a252327c56209063c017f2cd3a74366", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
