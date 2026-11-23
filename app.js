@@ -324,9 +324,7 @@
             esc(img.src) +
             '" alt="' +
             esc(img.alt) +
-            '" width="640" height="400" loading="' +
-            (idx < 2 && sIdx === 0 ? "eager" : "lazy") +
-            '" class="carousel-slide' +
+            '" width="640" height="400" loading="lazy" decoding="async" class="carousel-slide' +
             (sIdx === 0 ? " is-active" : "") +
             '" />'
           );
@@ -401,7 +399,7 @@
         esc(item.src) +
         '" alt="' +
         esc(item.alt) +
-        '" width="600" height="375" loading="lazy" />' +
+        '" width="600" height="375" loading="lazy" decoding="async" />' +
         "</figure>"
       );
     }).join("");
@@ -437,7 +435,7 @@
       "</div>" +
       "</div>" +
       '<figure class="hero-media">' +
-      '<img src="assets/hero.jpg" alt="Firegy Ltd fleet of fire safety engineering vehicles in Salford" width="880" height="550" fetchpriority="high" />' +
+      '<img src="assets/hero.jpg" alt="Firegy Ltd fleet of fire safety engineering vehicles in Salford" width="880" height="550" fetchpriority="high" decoding="async" />' +
       "</figure>" +
       "</div>" +
       "</section>" +
@@ -1014,7 +1012,7 @@
     if (currentView !== "home") {
       clearCarousels();
       currentView = "home";
-      document.title = 'Getting you compliant';
+      document.title = 'Firegy | Getting you compliant — Fire Risk Assessments & Fire Safety UK';
       main.innerHTML = renderHome();
       initHomeInteractions(main);
     }
